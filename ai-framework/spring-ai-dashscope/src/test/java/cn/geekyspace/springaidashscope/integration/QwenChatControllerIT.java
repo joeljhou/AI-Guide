@@ -27,7 +27,7 @@ class QwenChatControllerIT {
     @DisplayName("基础调用：询问模型身份，返回通义千问相关回答")
     void shouldReturnModelIntroductionWhenAskedAboutModel() {
         ResponseEntity<String> response = restTemplate.getForEntity(
-                "/api/qwen/chat/basic?userInput={question}",
+                "/api/qwen/chat/basic?userInput={userInput}",
                 String.class,
                 "你好，你使用的模型是？"
         );
@@ -36,6 +36,23 @@ class QwenChatControllerIT {
                 .as("HTTP 状态应为 200，响应体：%s", response.getBody())
                 .isEqualTo(HttpStatus.OK);
         assertThat(response.getBody()).isNotBlank().contains("通义千问");
+        System.out.println(response.getBody());
+    }
+
+    @Test
+    @DisplayName("知乎风格回答：手动指定 qwen-max 模型")
+    void shouldReturnZhihuAnswerWithSpecifiedModel() {
+        ResponseEntity<String> response = restTemplate.getForEntity(
+                "/api/qwen/chat/answer?question={question}&model={model}",
+                String.class,
+                "如何评价刘慈欣的《三体》？",
+                "qwen-max"
+        );
+
+        assertThat(response.getStatusCode())
+                .as("HTTP 状态应为 200，响应体：%s", response.getBody())
+                .isEqualTo(HttpStatus.OK);
+        assertThat(response.getBody()).isNotBlank().containsPattern("\\p{IsHan}");
         System.out.println(response.getBody());
     }
 }
