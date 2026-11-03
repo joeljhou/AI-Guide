@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "notes": {
+    "ai-framework": {
+      "_text": "基础",
+      "spring-ai": "OpenAI",
+      "spring-ai-dashscope": {
+        "_text": "IT老齐", "_meta": { "style": "stable" },
+        "src": {
+          "test": {
+            "java": {
+              "cn": {
+                "geekyspace": {
+                  "springaidashscope": {
+                    "integration": "集成测试",
+                    "unit": "单元测试"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
