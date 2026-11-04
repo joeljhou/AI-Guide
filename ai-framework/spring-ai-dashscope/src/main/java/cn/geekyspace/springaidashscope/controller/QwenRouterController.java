@@ -2,7 +2,6 @@ package cn.geekyspace.springaidashscope.controller;
 
 import cn.geekyspace.springaidashscope.service.QwenModelRouter;
 import cn.geekyspace.springaidashscope.service.QwenModelRouter.TaskType;
-import jakarta.validation.constraints.NotBlank;
 import lombok.RequiredArgsConstructor;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;

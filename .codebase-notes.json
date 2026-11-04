@@ -7,6 +7,23 @@
       "spring-ai-dashscope": {
         "_text": "IT老齐", "_meta": { "style": "stable" },
         "src": {
+          "main": {
+            "java": {
+              "cn": {
+                "geekyspace": {
+                  "springaidashscope": {
+                    "controller": {
+                      "QwenChatController.java": "一、Basic基础",
+                      "QwenRouterController.java": "二、模型路由"
+                    },
+                    "service": {
+                      "QwenModelRouter.java": { "_text": "模型路由", "_meta": { "style": "important" } }
+                    }
+                  }
+                }
+              }
+            }
+          },
           "test": {
             "java": {
               "cn": {
