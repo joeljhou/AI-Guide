@@ -16,10 +16,15 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <name>AI-Guide</name>
+    <description>LLM 应用与 Agent 工程实践，涵盖 RAG、MCP 工具集成与应用评测，提供 Java 实战示例。</description>
+    <url>https://github.com/joeljhou/AI-Guide</url>
+
     <!-- 聚合子模块，统一构建 -->
     <modules>
         <module>ai-framework/spring-ai</module>
         <module>ai-framework/spring-ai-dashscope</module>
+        <module>ai-framework/spring-reactive</module>
     </modules>
 
     <!-- 公共配置 -->

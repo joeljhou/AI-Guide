@@ -1,40 +1,27 @@
 {
-  "version": 2,
+  "version": 3,
   "notes": {
     "ai-framework": {
       "_text": "基础",
       "spring-ai": "OpenAI",
       "spring-ai-dashscope": {
-        "_text": "IT老齐", "_meta": { "style": "stable" },
+        "_text": "IT老齐", "_meta": { "style": "core" },
         "src": {
           "main": {
-            "java": {
-              "cn": {
-                "geekyspace": {
-                  "springaidashscope": {
-                    "controller": {
-                      "QwenChatController.java": "一、Basic基础",
-                      "QwenRouterController.java": "二、模型路由"
-                    },
-                    "service": {
-                      "QwenModelRouter.java": { "_text": "模型路由", "_meta": { "style": "important" } }
-                    }
-                  }
-                }
+            "java/cn/geekyspace/springaidashscope": {
+              "controller": {
+                "QwenChatController.java": "一、Basic基础",
+                "QwenRouterController.java": "二、模型路由",
+                "QwenStreamController.java": "三、SSE 流式输出"
+              },
+              "service": {
+                "QwenModelRouter.java": { "_text": "模型路由", "_meta": { "style": "important" } }
               }
             }
           },
-          "test": {
-            "java": {
-              "cn": {
-                "geekyspace": {
-                  "springaidashscope": {
-                    "integration": "集成测试",
-                    "unit": "单元测试"
-                  }
-                }
-              }
-            }
+          "test/java/cn/geekyspace/springaidashscope": {
+            "integration": "集成测试",
+            "unit": "单元测试"
           }
         }
       }
